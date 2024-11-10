@@ -4,8 +4,8 @@ using namespace std;
 int main()
 {
     setlocale(LC_ALL, "Rus");
-    int a; // число ввода
-    int n; // факториал
+    int a; 
+    int n; 
 
     cout << "Введите число от 1 до 7" << endl;
     cin >> a;
