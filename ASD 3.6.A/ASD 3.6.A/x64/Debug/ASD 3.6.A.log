@@ -1,2 +1,7 @@
 ﻿  ASD 3.6.A.cpp
-  ASD 3.6.A.vcxproj -> C:\Users\jr78k\Desktop\учеба\АСД\ASD 3.6.A\x64\Debug\ASD 3.6.A.exe
+C:\Users\jr78k\Desktop\учеба\АСД\ASD 3.6.A\ASD 3.6.A\ASD 3.6.A.cpp(52,13): error C2664: "int partitionLomuto(std::vector<int,std::allocator<int>> &,int,int)": невозможно преобразовать аргумент 1 из "int *" в "std::vector<int,std::allocator<int>> &"
+      C:\Users\jr78k\Desktop\учеба\АСД\ASD 3.6.A\ASD 3.6.A\ASD 3.6.A.cpp(8,5):
+       см. объявление "partitionLomuto"
+      C:\Users\jr78k\Desktop\учеба\АСД\ASD 3.6.A\ASD 3.6.A\ASD 3.6.A.cpp(52,13):
+      при попытке сопоставить список аргументов "(int *, int, int)"
+  

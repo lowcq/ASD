@@ -1,61 +1,52 @@
 ﻿#include <iostream>
-#include <algorithm>
 #include <vector>
 
 using namespace std;
 
+// Функция для разбиения Ломуто
+int partitionLomuto(vector<int>& arr, int small, int large)
+{
+    // Опорный элемент
+    int p = arr[small];
+    int i = small;
+
+    for (int j = small + 1; j <= large; ++j)
+    {
+        if (arr[j] < p) 
+        {
+            i++;
+            swap(arr[i], arr[j]);
+        }
+    }
+    swap(arr[small], arr[i]);
+    return i;
+}
+
+// Основная функция для чтения входных данных и вызова разбиения
 int main()
 {
-    setlocale(LC_ALL, "ru");
-
+    // Ввод размера массива
     int size;
-
     cout << "Введите размер массива: ";
     cin >> size;
-    int* arr = new int[size];
 
-    cout << "Введите элемент массива: " << endl;
+    vector<int> arr(size);
 
-    for (int i = 0; i < size; ++i)
+    // Ввод элементов массива
+    cout << "Введите элементы массива: " << endl;
+    for (int& x : arr) 
     {
-        cout << "элемент " << i + 1 << ": ";
-        cin >> arr[i];
+        cin >> x;
     }
 
-    cout << "Введенный массив: ";
-    for (int i = 0; i < size; ++i)
-    {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
+    //сортируем 
+    int p = partitionLomuto(arr, 0, size - 1);
 
-    int p = arr[0];
-    vector<int> left;
-    vector<int> right;
-
-    for (int i = 1; i < size; ++i) {
-        if (arr[i] < p) {
-            left.push_back(arr[i]);
-        }
-        else {
-            right.push_back(arr[i]);
-        }
-    }
-
-    sort(left.begin(), left.end());
-
-    cout << "Отсортированный массив: ";
-
-    for (int num : left) {
-        cout << num << " ";
-    }
-    cout << p << " "; // опорное число возвращается на своё место
-    for (int num : right) {
-        cout << num << " ";
+    // вывод рез
+    for (const auto& x : arr) {
+        cout << x << ' ';
     }
     cout << endl;
-    cout << endl;
 
-    delete[] arr;
     return 0;
 }
