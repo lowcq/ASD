@@ -1,18 +1,24 @@
 ﻿#include <iostream>
-#include "conio.h"
+
 using namespace std;
 
 	
 int fibonacchi(int n)
 {
-	if (n < 2)
+	if (n <= 1)
 	{
 		return n;
 	}
-	else
+
+	int a = 0, b = 1, result;
+
+	for (int i = 2; i <= n; ++i)
 	{
-		return fibonacchi(n - 2) + fibonacchi(n - 1);
+		result = a + b;
+		a = b;
+		b = result;
 	}
+	return result;
 }
 
 
@@ -20,12 +26,58 @@ int fibonacchi(int n)
 	{
 
 		setlocale(LC_ALL, "Rus");
-		
+
 		int n;
 		cout << "Введите число от 0 до 45" << endl;
 		cin >> n;
+
+		fibonacchi(n);
 
 		cout << fibonacchi(n);
 
 		return 0;
 	}
+
+
+	// для хендбука
+	/*
+	#include <iostream>
+
+using namespace std;
+
+	
+int fibonacchi(int n)
+{
+	if (n <= 1)
+	{
+		return n;
+	}
+
+	int a = 0, b = 1, result;
+
+	for (int i = 2; i <= n; ++i)
+	{
+		result = a + b;
+		a = b;
+		b = result;
+	}
+	return result;
+}
+
+
+	int main()
+	{
+
+		setlocale(LC_ALL, "Rus");
+
+		int n;
+		cout << "Введите число от 0 до 45" << endl;
+		cin >> n;
+
+		fibonacchi(n);
+
+		cout << fibonacchi(n);
+
+		return 0;
+	}
+*/
