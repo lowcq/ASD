@@ -1,0 +1,4 @@
+﻿  ASD 3.5.B.cpp
+C:\Users\jr78k\Desktop\учеба\АСД\ASD 3.5.B\ASD 3.5.B\ASD 3.5.B.cpp(1,10): error C2014: команда препроцессора не должна начинаться с пробела
+C:\Users\jr78k\Desktop\учеба\АСД\ASD 3.5.B\ASD 3.5.B\ASD 3.5.B.cpp(1,30): error C2006: "#include": требуется "FILENAME" или <FILENAME>.
+C:\Users\jr78k\Desktop\учеба\АСД\ASD 3.5.B\ASD 3.5.B\ASD 3.5.B.cpp(1,30): error C1083: Не удается открыть файл включение: : No such file or directory,
